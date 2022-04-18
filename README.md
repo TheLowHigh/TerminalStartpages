@@ -30,9 +30,20 @@ youtube [search]\
 github [search]\
 googletranslate [sentence] (or gt [sentence])\
 googlemaps [search] (or gmaps [search])\
+gmail [account_number]\
+gdocs [account_number]\
+gsheets [account_number]\
+gforms [account_number]\
+gdrive [account_number] (or googledrive [account_number])\
+wikipedia [search]\
 twitch [search]\
 imdb [search]\
+spotify [search]\
+deezer [search]\
+amazon [search]\
 code [path/to/file.txt]\
+stackoverflow [search]\
+discord\
 echo <what_you_want_to_echo>\
 clear (or cls)
 

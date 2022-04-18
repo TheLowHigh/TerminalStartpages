@@ -24,6 +24,90 @@ function youtube(cmd) {
     }
 }
 
+function gmail(cmd) {
+    if (cmd != "gmail") {
+        window.open("https://mail.google.com/mail/u/" + cmd.split(" ").slice(1)[0]);
+    } else {
+        window.open("https://mail.google.com");
+    }
+}
+
+
+function gdocs(cmd) {
+    if (cmd != "gdocs") {
+        window.open("https://docs.google.com/document/u/0" + cmd.split(" ").slice(1)[0]);
+    } else {
+        window.open("https://docs.google.com/");
+    }
+}
+
+function gsheets(cmd) {
+    if (cmd != "gsheets") {
+        window.open("https://docs.google.com/spreadsheets/u/0" + cmd.split(" ").slice(1)[0]);
+    } else {
+        window.open("https://docs.google.com/spreadsheets/");
+    }
+}
+
+function gslides(cmd) {
+    if (cmd != "gslides") {
+        window.open("https://docs.google.com/presentation/u/0" + cmd.split(" ").slice(1)[0]);
+    } else {
+        window.open("https://docs.google.com/presentation/");
+    }
+}
+
+function gforms(cmd) {
+    if (cmd != "gforms") {
+        window.open("https://docs.google.com/forms/u/0" + cmd.split(" ").slice(1)[0]);
+    } else {
+        window.open("https://docs.google.com/forms/");
+    }
+}
+
+googledrive=gdrive
+function gdrive(cmd) {
+    if (cmd != "gdrive") {
+        window.open("https://drive.google.com/drive/u/0" + cmd.split(" ").slice(1)[0]);
+    } else {
+        window.open("https://drive.google.com/");
+    }
+}
+
+function wikipedia(cmd) {
+    if (cmd != "wikipedia") {
+        str = "";
+        var parameters = cmd.split(" ").slice(1);
+        for (var i = 0; i < parameters.length; i++) {
+            str = str + "+" + parameters[i];
+        }
+        window.open("https://wikipedia.org/w/index.php?search=" + str);
+    } else {
+        window.open("https://wikipedia.org");
+    }
+}
+
+function discord(cmd) {
+    if (cmd != "discord") {
+        window.open("discord://" + cmd.split(" ").slice(1)[0]);
+    } else {
+        window.open("discord://");
+    }
+}
+
+function stackoverflow(cmd) {
+    if (cmd != "stackoverflow") {
+        str = "";
+        var parameters = cmd.split(" ").slice(1);
+        for (var i = 0; i < parameters.length; i++) {
+            str = str + "+" + parameters[i];
+        }
+        window.open("https://stackoverflow.com/search?q=" + str);
+    } else {
+        window.open("https://stackoverflow.com/");
+    }
+}
+
 function github(cmd) {
     if (cmd != "github") {
         str = "";
@@ -114,6 +198,19 @@ function deezer(cmd) {
         window.open("https://www.deezer.com/search/" + str);
     } else {
         window.open("https://www.deezer.com/");
+    }
+}
+
+function amazon(cmd) {
+    if (cmd != "amazon") {
+        str = "";
+        var parameters = cmd.split(" ").slice(1);
+        for (var i = 0; i < parameters.length; i++) {
+            str = str + "%20" + parameters[i];
+        }
+        window.open("https://amazon.com/s?k=" + str);
+    } else {
+        window.open("https://amazon.com");
     }
 }
 
