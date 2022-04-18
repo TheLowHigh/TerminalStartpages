@@ -217,6 +217,10 @@ function ls() {
   }
 }
 
+function exit() {
+  window.close();
+}
+
 function help() {
   block_log("reddit [subreddit]");
   block_log("google [search]");
