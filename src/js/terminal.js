@@ -1,4 +1,6 @@
-config = {
+import { COMMANDS } from "./commands.js";
+
+const config = {
   shellPrompt: "$ ",
 };
 
@@ -13,33 +15,53 @@ function new_block() {
   document.getElementById("wrapper").appendChild(current_block);
 }
 
-function block_log(message, shell = false) {
-  current_block.innerHTML = `<p class=${shell && "shell"}>` + message + "</p>";
+export const block_log = (message) => {
+  current_block.innerHTML = `<p>` + message + "</p>";
   new_block();
-}
+};
 
 function handleKeyUp() {
   if (event.keyCode === 13) submit_command();
-  if (event.keyCode === 38) last_command();
+  //if (event.keyCode === 38) last_command();
 }
 
 function submit_command() {
-  var command = document.getElementById("input_source").value;
+  const input = document.getElementById("input_source").value;
+  const inputArray = input.split(" ");
+  const command = inputArray.shift();
+
   document.getElementById("input_source").value = "";
 
   new_block();
 
-  if (typeof window[command.split(" ")[0]] === "function") {
-    block_log(config.shellPrompt + command, (shell = true));
-    window[command.split(" ")[0]](command);
-  } else if (command != "") {
-    block_log("command not found : " + command);
+  for (let com in COMMANDS) {
+    for (let alias of COMMANDS[com].commandAliases) {
+      if (command.split(" ")[0].toLowerCase() === alias.toLowerCase()) {
+        if (COMMANDS[com].action) {
+          COMMANDS[com].action(input);
+          return;
+        }
+
+        if (inputArray.length === 0) {
+          window.open(COMMANDS[com].url);
+          return;
+        }
+        const URL = generateURL(
+          COMMANDS[com].url,
+          COMMANDS[com].path || "",
+          COMMANDS[com].queryName,
+          COMMANDS[com].spaceCharacter || "+",
+          inputArray
+        );
+        block_log(config.shellPrompt + input);
+        window.open(URL);
+        return;
+      }
+    }
   }
+  block_log("command not found : " + command);
 }
 
-function last_command() {
-  const shellCommands = document.getElementsByClassName("shell");
-  document.getElementById("input_source").value =
-    shellCommands[shellCommands.length - 1].innerText.substr(2);
-}
-
+const generateURL = (url, path, qName, space, cmd) => {
+  return `${url}${path}${qName ? "?" + qName + "=" : "/"}${cmd.join(space)}`;
+};
