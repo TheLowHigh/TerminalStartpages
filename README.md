@@ -26,8 +26,10 @@ We got you covered. You need to edit the terminal.css variables.
 
 reddit [subreddit]\
 google [search]\
+duckduckgo [search]\
 youtube [search]\
 github [search]\
+wikipedia [search]\
 googletranslate [sentence] (or gt [sentence])\
 googlemaps [search] (or gmaps [search])\
 twitch [search]\
@@ -35,6 +37,9 @@ imdb [search]\
 code [path/to/file.txt]\
 echo <what_you_want_to_echo>\
 clear (or cls)
+ls
+date
+help
 
 # How to add commands ?
 

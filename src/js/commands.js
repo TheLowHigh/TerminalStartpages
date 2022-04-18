@@ -1,143 +1,236 @@
 function google(cmd) {
-    if (cmd != "google") {
-        str = "";
-        var parameters = cmd.split(" ").slice(1);
-        for (var i = 0; i < parameters.length; i++) {
-            str = str + "+" + parameters[i];
-        }
-        window.open("https://www.google.com/search?q=" + str);
-    } else {
-        window.open("https://www.google.com");
+  if (cmd != "google") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "+" + parameters[i];
     }
+    window.open("https://www.google.com/search?q=" + str);
+  } else {
+    window.open("https://www.google.com");
+  }
+}
+
+function duckduckgo(cmd) {
+  if (cmd != "duckduckgo") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "+" + parameters[i];
+    }
+    window.open("https://duckduckgo.com/?q=" + str);
+  } else {
+    window.open("https://www.duckduckgo.com");
+  }
 }
 
 function youtube(cmd) {
-    if (cmd != "youtube") {
-        str = "";
-        var parameters = cmd.split(" ").slice(1);
-        for (var i = 0; i < parameters.length; i++) {
-            str = str + "+" + parameters[i];
-        }
-        window.open("https://www.youtube.com/results?search_query=" + str);
-    } else {
-        window.open("https://www.youtube.com/");
+  if (cmd != "youtube") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "+" + parameters[i];
     }
+    window.open("https://www.youtube.com/results?search_query=" + str);
+  } else {
+    window.open("https://www.youtube.com/");
+  }
 }
 
 function github(cmd) {
-    if (cmd != "github") {
-        str = "";
-        var parameters = cmd.split(" ").slice(1);
-        for (var i = 0; i < parameters.length; i++) {
-            str = str + "+" + parameters[i];
-        }
-        window.open("https://github.com/search?q=" + str);
-    } else {
-        window.open("https://github.com/");
+  if (cmd != "github") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "+" + parameters[i];
     }
+    window.open("https://github.com/search?q=" + str);
+  } else {
+    window.open("https://github.com/");
+  }
 }
 
-gt=googletranslate
+gt = googletranslate;
 function googletranslate(cmd) {
-    if (cmd != "googletranslate") {
-        str = "";
-        var parameters = cmd.split(" ").slice(1);
-        for (var i = 0; i < parameters.length; i++) {
-            str = str + "+" + parameters[i];
-        }
-        window.open("https://translate.google.com/?sl=auto&tl=en&text=" + str + "&op=translate");
-    } else {
-        window.open("https://translate.google.com/");
+  if (cmd != "googletranslate") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "+" + parameters[i];
     }
+    window.open(
+      "https://translate.google.com/?sl=auto&tl=en&text=" +
+        str +
+        "&op=translate"
+    );
+  } else {
+    window.open("https://translate.google.com/");
+  }
 }
 
-gmaps=googlemaps
+gmaps = googlemaps;
 function googlemaps(cmd) {
-    if (cmd != "googlemaps") {
-        str = "";
-        var parameters = cmd.split(" ").slice(1);
-        for (var i = 0; i < parameters.length; i++) {
-            str = str + "+" + parameters[i];
-        }
-        window.open("https://www.google.by/maps/search/" + str);
-    } else {
-        window.open("https://www.google.by/maps/");
+  if (cmd != "googlemaps") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "+" + parameters[i];
     }
+    window.open("https://www.google.by/maps/search/" + str);
+  } else {
+    window.open("https://www.google.by/maps/");
+  }
 }
 
 function twitch(cmd) {
-    if (cmd != "twitch") {
-        str = "";
-        var parameters = cmd.split(" ").slice(1);
-        for (var i = 0; i < parameters.length; i++) {
-            str = str + "+" + parameters[i];
-        }
-        window.open("https://www.twitch.tv/search?term=" + str);
-    } else {
-        window.open("https://twitch.tv/");
+  if (cmd != "twitch") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "+" + parameters[i];
     }
+    window.open("https://www.twitch.tv/search?term=" + str);
+  } else {
+    window.open("https://twitch.tv/");
+  }
 }
 
 function imdb(cmd) {
-    if (cmd != "imdb") {
-        str = "";
-        var parameters = cmd.split(" ").slice(1);
-        for (var i = 0; i < parameters.length; i++) {
-            str = str + "+" + parameters[i];
-        }
-        window.open("https://www.imdb.com/find?q=" + str);
-    } else {
-        window.open("https://imdb.com/");
+  if (cmd != "imdb") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "+" + parameters[i];
     }
+    window.open("https://www.imdb.com/find?q=" + str);
+  } else {
+    window.open("https://imdb.com/");
+  }
 }
 
 function spotify(cmd) {
-    if (cmd != "spotify") {
-        str = "";
-        var parameters = cmd.split(" ").slice(1);
-        for (var i = 0; i < parameters.length; i++) {
-            str = str + "%20" + parameters[i];
-        }
-        window.open("https://open.spotify.com/search/" + str);
-    } else {
-        window.open("https://open.spotify.com/");
+  if (cmd != "spotify") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "%20" + parameters[i];
     }
+    window.open("https://open.spotify.com/search/" + str);
+  } else {
+    window.open("https://open.spotify.com/");
+  }
 }
 
 function deezer(cmd) {
-    if (cmd != "deezer") {
-        str = "";
-        var parameters = cmd.split(" ").slice(1);
-        for (var i = 0; i < parameters.length; i++) {
-            str = str + "%20" + parameters[i];
-        }
-        window.open("https://www.deezer.com/search/" + str);
-    } else {
-        window.open("https://www.deezer.com/");
+  if (cmd != "deezer") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "%20" + parameters[i];
     }
+    window.open("https://www.deezer.com/search/" + str);
+  } else {
+    window.open("https://www.deezer.com/");
+  }
 }
 
 function code(cmd) {
-    if (cmd != "code") {
-        window.open("vscode://" + cmd.split(" ").slice(1)[0]);
-    } else {
-        window.open("vscode://");
-    }
+  if (cmd != "code") {
+    window.open("vscode://" + cmd.split(" ").slice(1)[0]);
+  } else {
+    window.open("vscode://");
+  }
 }
 
 function reddit(cmd) {
-    if (cmd != "reddit") {
-        window.open("https://www.reddit.com/r/" + cmd.split(" ").slice(1)[0]);
-    } else {
-        window.open("https://www.reddit.com/");
-    }
+  if (cmd != "reddit") {
+    window.open("https://www.reddit.com/r/" + cmd.split(" ").slice(1)[0]);
+  } else {
+    window.open("https://www.reddit.com/");
+  }
 }
 
-cls=clear
+cls = clear;
 function clear(cmd) {
-    document.getElementById('wrapper').innerHTML = "";
+  document.getElementById("wrapper").innerHTML = "";
 }
 
 function echo(cmd) {
-    block_log(cmd.split(" ").slice(1).join(" "))
+  block_log(cmd.split(" ").slice(1).join(" "));
+}
+
+function wikipedia(cmd) {
+  if (cmd != "wikipedia") {
+    str = "";
+    var parameters = cmd.split(" ").slice(1);
+    for (var i = 0; i < parameters.length; i++) {
+      str = str + "_" + parameters[i];
+    }
+    window.open("https://wikipedia.org/wiki/" + str);
+  } else {
+    window.open("https://wikipedia.org/");
+  }
+}
+
+function date() {
+  const date = new Date();
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const dateString = `${days[date.getDay()]}, ${date.getDate()} ${
+    months[date.getMonth()]
+  }, ${date.getFullYear()}`;
+
+  const timeString = `${("0" + date.getHours()).substr(-2)}:${(
+    "0" + date.getMinutes()
+  ).substr(-2)}:${("0" + date.getSeconds()).substr(-2)}`;
+
+  block_log(`${timeString} | ${dateString}`);
+}
+
+function ls() {
+  for (let i in window) {
+    if (typeof window[i] === "function") {
+      block_log(window[i].name);
+    }
+  }
+}
+
+function help() {
+  block_log("reddit [subreddit]");
+  block_log("google [search]");
+  block_log("duckduckgo [search]");
+  block_log("youtube [search]");
+  block_log("github [search]");
+  block_log("googletranslate [sentence] (or gt [sentence])");
+  block_log("googlemaps [search] (or gmaps [search])");
+  block_log("twitch [search]");
+  block_log("imdb [search]");
+  block_log("code [path/to/file.txt]");
+  block_log("echo <what_you_want_to_echo>");
+  block_log("clear (or cls)");
+  block_log("ls");
+  block_log("date");
+  block_log("help");
 }
