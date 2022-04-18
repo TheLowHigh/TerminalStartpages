@@ -21,7 +21,6 @@ function block_log(message, shell = false) {
 function handleKeyUp() {
   if (event.keyCode === 13) submit_command();
   if (event.keyCode === 38) last_command();
-  else return;
 }
 
 function submit_command() {
