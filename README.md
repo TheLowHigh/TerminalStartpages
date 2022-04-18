@@ -36,10 +36,10 @@ twitch [search]\
 imdb [search]\
 code [path/to/file.txt]\
 echo <what_you_want_to_echo>\
-clear (or cls)
-ls
-date
-help
+clear (or cls)\
+ls\
+date\
+help\
 
 # How to add commands ?
 
