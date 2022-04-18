@@ -39,7 +39,7 @@ echo <what_you_want_to_echo>\
 clear (or cls)\
 ls\
 date\
-help\
+help
 
 # How to add commands ?
 
