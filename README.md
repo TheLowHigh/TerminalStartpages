@@ -33,7 +33,8 @@ imdb [search]\
 echo <what_you_want_to_echo>\
 clear (or cls)\
 ls ( or dir )\
-date ( or time )
+date ( or time )\
+[theme|colorscheme] [theme] 
 
 # How to add commands ?
 

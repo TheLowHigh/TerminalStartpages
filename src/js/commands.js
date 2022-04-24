@@ -1,4 +1,4 @@
-import { clearTerm, date, ls, exit, echo } from "./functions.js";
+import { clearTerm, date, ls, exit, echo, colorscheme } from "./functions.js";
 
 export const COMMANDS = {
   Google: {
@@ -78,4 +78,8 @@ export const COMMANDS = {
     commandAliases: ["echo"],
     action: echo,
   },
+  Theme: {
+    commandAliases: ["theme", "colorscheme"],
+    action: colorscheme,
+  }
 };

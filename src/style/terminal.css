@@ -1,7 +1,79 @@
-:root {
+body.default {
     --main-bg-color: #547c99;
     --prompt-bg-color: #151515;
     --text-color: #6c99bb;
+}
+
+body.gruvbox_dark {
+    --main-bg-color: #282828;
+    --prompt-bg-color: #3c3836;
+    --text-color: #bdae93;
+}
+
+body.gruvbox_light {
+    --main-bg-color: #fbf1c7;
+    --prompt-bg-color: #bdae93;
+    --text-color: #3c3836;
+}
+
+body.nord {
+    --main-bg-color: #2e3440;
+    --prompt-bg-color: #4c566a;
+    --text-color: #eceff4;
+}
+
+body.xerocherry_light {
+    --main-bg-color: rgb(105,110,194) ;
+    --prompt-bg-color: rgb(255,207,242);
+    --text-color: rgb(105,110,194) ;
+}
+
+body.xerocherry_dark {
+    --main-bg-color: rgb(45,48,84);
+    --prompt-bg-color: rgb(105,110,194) ;
+    --text-color: rgb(255,207,242);
+}
+
+body.catppuccin {
+    --main-bg-color: #acb5ed;
+    --prompt-bg-color: #1e1d2d;
+    --text-color: #d5d4e3;
+}
+
+body.solarized_dark {
+    --main-bg-color: #002b36;
+    --prompt-bg-color: #00222b;
+    --text-color: #859900;
+}
+
+body.solarized_light {
+    --main-bg-color: #fdf6e3;
+    --prompt-bg-color: #e2d8be;
+    --text-color: #181819;
+}
+
+body.vscode {
+    --main-bg-color: #1e1e1e;
+    --prompt-bg-color: #191919;
+    --text-color: #007acc;
+}
+
+body.monokai {
+    --main-bg-color: #272822;
+    --prompt-bg-color: #1f201b;
+    --text-color: #e6db74;
+}
+
+body.dracula {
+    --main-bg-color: #282a36;
+    --prompt-bg-color: #20222c;
+    --text-color: #bd93f9;
+}
+
+body.onedark {
+    --main-bg-color: #2f343f;
+    --prompt-bg-color: #262b34;
+    --text-color: #98c379;
 }
 
 * {
@@ -21,6 +93,8 @@ body {
     justify-content: center;
     overflow: hidden;
     background-color: var(--main-bg-color);
+
+    transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
   }
 
 #screen {

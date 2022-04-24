@@ -4,8 +4,15 @@ const config = {
   shellPrompt: "$ ",
 };
 
+const restoreTheme = () => {
+  let colorscheme = JSON.parse(localStorage.getItem("colorscheme"));
+  if (!colorscheme) { colorscheme = ["default"]}
+  document.body.classList = colorscheme;
+}
+
 document.getElementById("input_title").innerText = config.shellPrompt;
 document.getElementById("input_source").addEventListener("keyup", handleKeyUp);
+window.addEventListener("load", restoreTheme);
 
 var current_block;
 
